@@ -6,76 +6,60 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/nameText"
+    <Button
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:text="Введите ваше имя и пароль"
-        android:textColor="#03A9F4"
-        android:textSize="24sp"
+        android:layout_marginBottom="152dp"
+        android:onClick="onClickone"
+        android:text="Переход на другое окно"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="172dp"
+        android:text="@string/hello"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/printButton"
+    <TextView
+        android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="76dp"
-        android:backgroundTint="@color/design_default_color_error"
-        android:text="Посчитать зп"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/workerphoto"
-        app:layout_constraintStart_toStartOf="@+id/workerphoto" />
-
-    <EditText
-        android:id="@+id/writeName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="92dp"
-        android:ems="10"
-        android:hint="Имя"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="@+id/nameText"
-        app:layout_constraintStart_toStartOf="@+id/nameText"
-        app:layout_constraintTop_toBottomOf="@+id/nameText" />
+        android:layout_marginTop="60dp"
+        android:text="Количество букв в имени"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
 
     <TextView
-        android:id="@+id/payText"
+        android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:gravity="center"
-        android:text=""
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/passwordwrite"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="@+id/passwordwrite"
-        app:layout_constraintTop_toBottomOf="@+id/passwordwrite" />
+        android:layout_marginTop="84dp"
+        android:text="0"
+        app:layout_constraintEnd_toEndOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <EditText
-        android:id="@+id/passwordwrite"
+        android:id="@+id/editTextTextPersonName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="49dp"
+        android:layout_marginTop="56dp"
         android:ems="10"
-        android:hint="Пароль"
-        android:inputType="number"
+        android:inputType="textPersonName"
         android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="@+id/writeName"
-        app:layout_constraintStart_toStartOf="@+id/writeName"
-        app:layout_constraintTop_toBottomOf="@+id/writeName" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="SpeakableTextPresentCheck" />
 
-    <ImageView
-        android:id="@+id/workerphoto"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginBottom="68dp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/printButton"
-        app:layout_constraintEnd_toEndOf="@+id/payText"
-        app:layout_constraintStart_toStartOf="@+id/payText"
-        app:srcCompat="@drawable/error" />
 </androidx.constraintlayout.widget.ConstraintLayout>
